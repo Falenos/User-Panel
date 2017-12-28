@@ -12,7 +12,7 @@ Testing
 - Example of React app that works with Mock data
 
 Server side rendering
--ReactDOMServer to make the server node respond with an initial html string that represents the exact React application on the client for better performance.
+- ReactDOMServer to make the server node respond with an initial html string that represents the exact React application on the client for better performance.
 
 Usefull commands
 - yarn dev
