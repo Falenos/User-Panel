@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserList renders correctly 1`] = `
+<div>
+  <div>
+    <div>
+      a
+    </div>
+    <div />
+  </div>
+  <div>
+    <div>
+      b
+    </div>
+    <div />
+  </div>
+</div>
+`;
