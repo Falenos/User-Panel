@@ -1,0 +1,8 @@
+{
+  "name": "state-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yorgos Kakavas",
+  "license": "MIT",
+  "private": false
+}
