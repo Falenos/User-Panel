@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import StateApi from 'state-api';
 import App from 'components/App';
 
-const css = require('app.scss');
+const css = require('styles/index.scss');
 
 const store = new StateApi(window.initialData);
 

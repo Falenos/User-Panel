@@ -2,12 +2,12 @@
   "name": "advanced-react",
   "version": "1.0.0",
   "description": "Advanced React",
-  "main": "lib/server.js",
+  "main": "src/server.js",
   "repository": "",
   "author": "Yorgos kakavas",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./src pm2 start src/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
