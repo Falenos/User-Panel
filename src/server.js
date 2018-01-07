@@ -9,9 +9,14 @@ app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/', async (req, res) => {
-  const initialContent = await serverRender();
+app.get('/users', async (req, res) => {
+  const initialContent = await serverRender("users");
   res.render('index', { ...initialContent });
+});
+
+app.get('/', async (req, res) => {
+  const welcomeContent = await serverRender("welcome");
+  res.render('welcome', { ...welcomeContent });
 });
 
 app.get('/data', (req, res) => {

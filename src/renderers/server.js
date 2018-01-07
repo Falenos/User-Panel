@@ -5,11 +5,20 @@ import ReactDOMServer from 'react-dom/server';
 import config from 'config';
 
 import App from 'components/App';
+import Welcome from 'components/Welcome';
 
 // TODO solve issues of SSR and style loaders
 // const css = require('app.scss');
 
-const serverRender = async () => {
+const serverRender = async (path) => {
+
+  if (path === "welcome") {
+    return {
+      welcomeMarkup: ReactDOMServer.renderToString(
+        <Welcome />
+      )
+    };
+  }
 
   const resp = await axios.get(`http://${config.host}:${config.port}/data`);
   const store = new StateApi(resp.data);
@@ -18,7 +27,7 @@ const serverRender = async () => {
   return {
     initialMarkup: ReactDOMServer.renderToString(
       <App store={store} />
-    ),
+    )
     initialData: resp.data
   };
 };
