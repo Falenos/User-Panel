@@ -5,7 +5,7 @@ import App from 'components/App';
 
 const css = require('styles/index.scss');
 
-const store = new StateApi(window.initialData);
+const store = window.initialData && new StateApi(window.initialData);
 
 ReactDOM.render(
   <App store={store} />,

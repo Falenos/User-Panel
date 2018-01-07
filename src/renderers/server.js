@@ -27,7 +27,7 @@ const serverRender = async (path) => {
   return {
     initialMarkup: ReactDOMServer.renderToString(
       <App store={store} />
-    )
+    ),
     initialData: resp.data
   };
 };
