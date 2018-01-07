@@ -33,12 +33,16 @@
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.8",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "node-sass": "^4.7.2",
     "pm2": "^2.4.6",
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
     "webpack": "^2.5.0"
   }
 }
