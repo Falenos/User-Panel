@@ -1,6 +1,6 @@
 // When moving to production we can skip this directory and add it as npm package
 
-class StateApi {
+class DataApi {
 
   constructor(rawData) {
     this.data = {
@@ -17,10 +17,10 @@ class StateApi {
 
   lookupUser = userId => this.data.users[userId];
 
-  getState = () => {
+  getData = () => {
     return this.data;
   }
 
 }
 
-export default StateApi;
+export default DataApi;

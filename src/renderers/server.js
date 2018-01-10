@@ -1,8 +1,15 @@
 import React from 'react';
 import axios from 'axios';
-import StateApi from 'state-api';
+/*
+  import now works from the directory,
+  but it will also work when state-api in imported as an npm package in production,
+  due to path.resolve in webpack.config
+*/
+import DataApi from 'data-api';
 import ReactDOMServer from 'react-dom/server';
 import config from 'config';
+import configure from 'store/config';
+import { Provider } from 'react-redux';
 
 import App from 'components/App';
 import Welcome from 'components/Welcome';
@@ -21,14 +28,17 @@ const serverRender = async (path) => {
   }
 
   const resp = await axios.get(`http://${config.host}:${config.port}/data`);
-  const store = new StateApi(resp.data);
+  const data = new DataApi(resp.data).getData();
+  const store = configure(data);
 
   // the initialData are returned from the server to avoid the network operation neseccary to fetch them to the client side
   return {
     initialMarkup: ReactDOMServer.renderToString(
-      <App store={store} />
+      <Provider store={store} >
+        <App />
+      </Provider>,
     ),
-    initialData: resp.data
+    initialData: store.getState()
   };
 };
 
