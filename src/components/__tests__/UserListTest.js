@@ -1,29 +1,30 @@
-// import React from 'react';
-// import UserList from '../UserList';
-// import renderer from 'react-test-renderer';
+import React from 'react';
+import UserList from '../UserList';
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configure from '../../store/config';
 
-// describe('UserList', () => {
 
-//   const testProps = {
-//     users: {
-//       a: {id: 'a'},
-//       b: {id: 'b'}
-//     },
-//     // userActions: {
-//     //   lookupUser: jest.fn(() => ({}))
-//     // }
-//   };
+describe('UserList', () => {
 
-//   it('renders correctly', () => {
-//     const tree = renderer.create(
-//       <UserList
-//         {...testProps}
-//       />
-//     ).toJSON();
+  const testProps = {
+    users: {
+      a: {id: 'a'},
+      b: {id: 'b'}
+    }
+  };
+  const store = configure(testProps);
 
-//     expect(tree.children.length).toBe(2);
+  it('renders correctly', () => {
+    const tree = renderer.create(
+      <Provider store={store}>
+        <UserList />
+      </Provider>
+    ).toJSON();
 
-//     expect(tree).toMatchSnapshot();
-//   });
+    expect(tree.children.length).toBe(2);
 
-// });
+    expect(tree).toMatchSnapshot();
+  });
+
+});
