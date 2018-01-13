@@ -1,16 +1,22 @@
 import React from 'react';
 import axios from 'axios';
-// const styles = require('./app.scss');
-// const css = require('./app.css');
+import { connect } from 'react-redux';
 import UserList from './UserList';
+import EditUser from './EditUser';
 
-class App extends React.Component {
-
-  render() {
-    return (
+const App = (props) => {
+  return (
+    <div>
       <UserList />
-    );
-  }
+      {props.activeUser && <EditUser />}
+    </div>
+  );
 }
 
-export default App;
+export default connect(
+  (state) => {
+    return {
+      activeUser: state.activeUser
+    }
+  }
+)(App);

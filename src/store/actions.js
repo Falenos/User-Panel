@@ -1,13 +1,13 @@
-export var openUser = (userId) => {
+export var openUserEdit = (userId) => {
   return {
     type: 'OPEN_USER_DETAILS',
     userId
   }
 }
 
-export var editUserData = (field, value) => {
+export var editUserData = (newData) => {
   return {
     type: 'EDIT_USER_DATA',
-    field: value
+    value: newData
   }
 }

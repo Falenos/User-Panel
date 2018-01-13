@@ -2,13 +2,17 @@
 
 exports[`UserList renders correctly 1`] = `
 <div>
-  <div>
+  <div
+    onClick={[Function]}
+  >
     <div>
       a
     </div>
     <div />
   </div>
-  <div>
+  <div
+    onClick={[Function]}
+  >
     <div>
       b
     </div>
