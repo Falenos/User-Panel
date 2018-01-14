@@ -1,22 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UserList renders correctly 1`] = `
-<div>
+<div
+  className="grid"
+>
   <div
+    className="grid-item"
     onClick={[Function]}
   >
-    <div>
-      a
+    <div
+      className="grid-item-header"
+    >
+      <div>
+        a
+      </div>
     </div>
-    <div />
+    <div
+      className="grid-item-content"
+    >
+      <div>
+        a
+      </div>
+      <div>
+        a
+      </div>
+      <div>
+        a
+      </div>
+      <div>
+        a
+      </div>
+      <div>
+        a
+      </div>
+    </div>
   </div>
   <div
+    className="grid-item"
     onClick={[Function]}
   >
-    <div>
-      b
+    <div
+      className="grid-item-header"
+    >
+      <div>
+        b
+      </div>
     </div>
-    <div />
+    <div
+      className="grid-item-content"
+    >
+      <div>
+        b
+      </div>
+      <div>
+        b
+      </div>
+      <div>
+        b
+      </div>
+      <div>
+        b
+      </div>
+      <div>
+        b
+      </div>
+    </div>
   </div>
 </div>
 `;

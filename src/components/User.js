@@ -27,6 +27,6 @@ User.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string
   })
-}
+};
 
 export default connect()(User);

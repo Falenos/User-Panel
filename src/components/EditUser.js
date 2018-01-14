@@ -14,7 +14,7 @@ class EditUser extends React.Component {
       phone: this.refs.phone.value,
       website: this.refs.website.value,
       companyName: this.refs.companyName.value
-    }
+    };
 
     return this.props.dispatch(editUserData(newVal));
   }
@@ -33,18 +33,18 @@ class EditUser extends React.Component {
       </div>
     );
   }
-};
+}
 
 EditUser.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string
   })
-}
+};
 
 export default connect(
   (state) => {
     return {
       user: state.users[state.activeUser]
-    }
+    };
   }
 )(EditUser);

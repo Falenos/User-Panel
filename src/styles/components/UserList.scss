@@ -1,0 +1,10 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  // to avoid streching of row items
+  align-items: flex-start;
+}
+.grid ~ .overlay {
+  height: 100vh;
+}

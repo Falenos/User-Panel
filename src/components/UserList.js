@@ -6,7 +6,7 @@ class UserList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='grid'>
         {Object.values(this.props.users).map(user =>
           <User
             key={user.id}

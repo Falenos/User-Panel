@@ -1,0 +1,28 @@
+.grid-item {
+  border: 1px solid $black;
+  border-radius: $grid-radius;
+  margin: 6px;
+  .grid-item-header {
+    font-size: 24px;
+    background-color: $petrol;
+    border-top-left-radius: $grid-radius;
+    border-top-right-radius: $grid-radius;
+  }
+  .grid-item-content {
+    padding: 6px;
+    background-color: $blue;
+    color: $white;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: $grid-radius;
+    border-bottom-right-radius: $grid-radius;
+    div {
+      margin: 2px auto;
+      // this ensures the width of the grid item will depend on the user name
+      max-width: 140px;
+      word-wrap: wrap;
+    }
+  }
+}

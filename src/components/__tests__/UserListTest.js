@@ -9,8 +9,32 @@ describe('UserList', () => {
 
   const testProps = {
     users: {
-      a: {id: 'a'},
-      b: {id: 'b'}
+      a: {
+        id: 'a',
+        name: 'a',
+        email: 'a',
+        phone: 'a',
+        website: 'a',
+        address: {
+          city: 'a'
+        },
+        company: {
+          name: 'a'
+        }
+      },
+      b: {
+        id: 'b',
+        name: 'b',
+        email: 'b',
+        phone: 'b',
+        website: 'b',
+        address: {
+          city: 'b'
+        },
+        company: {
+          name: 'b'
+        }
+      }
     }
   };
   const store = configure(testProps);
