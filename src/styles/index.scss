@@ -1,11 +1,52 @@
-div {
-  color: red;
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+// Variables
+$font: 'Lato', sans-serif;
+
+// Colors
+$red: #e50914;
+$black: #221f1f;
+$blackblack: #000000;
+$grey: #f5f5f1;
+$white: #ffffff;
+
+// General
+body {
+  margin: 0;
+  font-family: $font;
 }
-.userEdit-container {
-  width: 50vw;
-  height: 50vh;
-  // position: absolute;
-  // top: 25vh;
-  background-color: grey;
-  margin: auto;
+
+#landing {
+  background: $black;
+  color: $white;
 }
+
+// Typography
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// imports
+@import "./components/Landing.scss";
+

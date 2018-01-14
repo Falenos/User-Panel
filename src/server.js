@@ -10,8 +10,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
-  const welcomeContent = await serverRender("welcome");
-  res.render('welcome', { ...welcomeContent });
+  const landingContent = await serverRender("landing");
+  res.render('landing', { ...landingContent });
 });
 
 app.get('/users', async (req, res) => {

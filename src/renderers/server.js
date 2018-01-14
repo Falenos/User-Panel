@@ -12,17 +12,17 @@ import configure from 'store/config';
 import { Provider } from 'react-redux';
 
 import App from 'components/App';
-import Welcome from 'components/Welcome';
+import Landing from 'components/Landing';
 
 // TODO solve issues of SSR and style loaders
 // const css = require('app.scss');
 
 const serverRender = async (path) => {
 
-  if (path === "welcome") {
+  if (path === "landing") {
     return {
-      welcomeMarkup: ReactDOMServer.renderToString(
-        <Welcome />
+      landingMarkup: ReactDOMServer.renderToString(
+        <Landing />
       )
     };
   }

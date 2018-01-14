@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import DataApi from 'data-api';
 import App from 'components/App';
-import Welcome from 'components/Welcome';
+import Landing from 'components/Landing';
 import configure from 'store/config';
 import { Provider } from 'react-redux';
 
@@ -10,8 +10,8 @@ const css = require('styles/index.scss');
 
 if (window.location.pathname === "/") {
   ReactDOM.render(
-    <Welcome />,
-    document.getElementById('root')
+    <Landing />,
+    document.getElementById('landing')
   );
 } else {
   // const storeOld = window.initialData && new DataApi(window.initialData);

@@ -1,0 +1,137 @@
+////////////
+// MIXINS //
+////////////
+@mixin generate-gradient($color,$amount) {
+  background: -moz-linear-gradient(top, rgba($color,$amount) 0%, rgba($color,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba($color,$amount) 0%,rgba($color,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba($color,$amount) 0%,rgba($color,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+////////////////
+// COMPONENTS //
+////////////////
+
+// Header
+.Header {
+  @include generate-gradient($blackblack, 1);
+  display: flex;
+  padding: 0 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 5;
+  .logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    transition: margin .125s ease;
+
+    &:hover {
+      cursor: pointer;
+      margin-top: 2px;
+    }
+  }
+}
+
+// Navigation
+.Navigation {
+  ul {
+    display: flex;
+    height: 37px;
+    align-items: center;
+    padding: 0 10px;
+
+    li {
+      font-weight: 400;
+      padding: 7px 10px;
+      font-size: 14px;
+      transition: background .125s ease;
+      border-radius: 3px;
+
+      &:hover {
+        background: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// Hero Image
+.Hero {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+
+  .content {
+    position: relative;
+    z-index: 4;
+    padding: 5vw;
+    top: 20vh;
+
+    .logo {
+      max-width: 400px;
+      display: block;
+      position: relative;
+      left: -5px;
+    }
+
+    p {
+      max-width: 500px;
+    }
+
+    .button-wrapper {
+      display: flex;
+      width: 400px;
+      margin-top: 30px;
+
+      .Button:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .overlay {
+    @include generate-gradient($black, 1);
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotate(180deg);
+  }
+}
+
+// Button
+.Button {
+  background: transparent;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $white;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba($grey, .2);
+  border-radius: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: border .125s ease, background .125s ease;
+
+  &:hover {
+    border: 2px solid $grey;
+  }
+
+  &[data-primary='true'] {
+    border: 2px solid $red;
+
+    &:hover {
+      background: $red;
+    }
+  }
+}
