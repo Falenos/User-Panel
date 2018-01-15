@@ -5,6 +5,7 @@ Features:
 - Babel for server and client side code
 - Webpack to package the client side code to a bundle.js
 - React on the client
+- Redux for state management
 - Jest for testing the javascript code and the example React Components
 
 Testing
