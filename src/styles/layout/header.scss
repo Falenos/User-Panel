@@ -1,0 +1,48 @@
+// Header
+.Header {
+  @include generate-gradient($blackblack, 1);
+  display: flex;
+  padding: 0 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 5;
+  .logo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    transition: margin .125s ease;
+
+    &:hover {
+      cursor: pointer;
+      margin-top: 2px;
+    }
+  }
+}
+
+// Navigation
+.Navigation {
+  ul {
+    display: flex;
+    height: 37px;
+    align-items: center;
+    padding: 0 10px;
+
+    li {
+      font-weight: 400;
+      padding: 7px 10px;
+      font-size: 14px;
+      transition: background .125s ease;
+      border-radius: 3px;
+
+      &:hover {
+        background: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}

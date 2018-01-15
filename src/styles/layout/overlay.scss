@@ -1,0 +1,10 @@
+.overlay {
+  @include generate-gradient($black, 1);
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotate(180deg);
+}
