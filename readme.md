@@ -24,6 +24,7 @@ and then from a second console
 - yarn webpack | Initializes the webpack watcher process
 
 Usefull commands
+- yarn test | to run all existing tests
 - yarn pm2 list | shows you the list of open threads
 - yarn pm2 delete <thread name> | deletes the thread
 so if you need to restart yarn pm2 delete server
