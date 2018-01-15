@@ -56,7 +56,7 @@ class EditUser extends React.Component {
 
 EditUser.propTypes = {
   user: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     name: PropTypes.string,
     email: PropTypes.string,
     address: PropTypes.shape({
