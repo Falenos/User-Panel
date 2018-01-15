@@ -1,7 +1,7 @@
 {
-  "name": "advanced-react",
+  "name": "user-panel",
   "version": "1.0.0",
-  "description": "Advanced React",
+  "description": "User Panel App",
   "main": "src/server.js",
   "repository": "",
   "author": "Yorgos kakavas",
