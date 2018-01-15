@@ -1,4 +1,4 @@
-A Full Stack Javascript Environment
+User Panel App.
 
 Features:
 - Express as a web server
