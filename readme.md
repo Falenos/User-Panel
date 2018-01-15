@@ -18,7 +18,8 @@ After you download the repo execute in the descriped manner
 - yarn | Adds the dependencies
 - yarn dev | Initializes the pm2 watcher process
 - yarn pm2 logs | To watch the logs
-and then form a second console
+
+and then from a second console
 - yarn webpack | Initializes the webpack watcher process
 
 Usefull commands
