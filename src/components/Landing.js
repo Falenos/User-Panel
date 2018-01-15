@@ -45,7 +45,7 @@ const Hero = () => {
         <h3>Additional Features</h3>
         <p>Server Side Rendering, Automated tests</p>
         <h3>Comments</h3>
-        <p>There is still an issue with styles in SSR. This is why there is an initial rendering without styles when you enter /users. Js is fine though</p>
+        <p>There is still an issue with styles and SSR. This is why there is an initial rendering without styles when you enter /users. Js is fine though</p>
         <p>Also DataApi transforms the users array to obj for slightly better performance (in case we had a lot of users)</p>
         <div className='button-wrapper'>
           <HeroButton primary={true} text='My Users' path='/users'/>
