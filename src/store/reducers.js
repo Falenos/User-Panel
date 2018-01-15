@@ -6,6 +6,7 @@ const reducer = (state, action) => {
       });
     case 'EDIT_USER_DATA':
       const { id, name, email, city, phone, website, companyName } = action.value;
+      // seems a bit streched to user com bine reducer for 2 nested properties, but not sure if this is considered a good practice.
       const newAddress = {
         ...state.users[action.value.id].address,
         city

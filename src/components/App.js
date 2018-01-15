@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import UserList from './UserList';
 import EditUser from './EditUser';
@@ -12,12 +12,16 @@ const App = (props) => {
       {props.activeUser && <div className='overlay'></div>}
     </div>
   );
-}
+};
+
+App.propTypes = {
+  activeUser: PropTypes.number
+};
 
 export default connect(
   (state) => {
     return {
       activeUser: state.activeUser
-    }
+    };
   }
 )(App);

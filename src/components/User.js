@@ -25,7 +25,17 @@ const User = (props) => {
 
 User.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    email: PropTypes.string,
+    address: PropTypes.shape({
+      city: PropTypes.string
+    }),
+    phone: PropTypes.string,
+    website: PropTypes.string,
+    company: PropTypes.shape({
+      name: PropTypes.string
+    })
   })
 };
 

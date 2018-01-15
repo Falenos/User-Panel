@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import User from './User';
 import { connect } from 'react-redux';
 
@@ -18,10 +19,14 @@ class UserList extends React.Component {
   }
 }
 
+UserList.propTypes = {
+  user: PropTypes.object
+};
+
 export default connect(
   (state) => {
     return {
       users: state.users
-    }
+    };
   }
 )(UserList);

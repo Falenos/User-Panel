@@ -15,8 +15,6 @@ class DataApi {
     }, {});
   }
 
-  // lookupUser = userId => this.data.users[userId];
-
   getData = () => {
     return this.data;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Landing = (props) => {
+const Landing = () => {
   return (
     <div>
       <Header />
@@ -9,13 +9,8 @@ const Landing = (props) => {
   );
 };
 
-export default Landing;
-
-
-////////////
-// Header //
-////////////
-
+// Header
+// If reused, move to components/layout
 const Header = () => {
   return (
     <header className='Header'>
@@ -40,11 +35,8 @@ const Navigation = () => {
   );
 };
 
-//////////
-// Hero //
-//////////
-
-const Hero = (props) => {
+// Hero
+const Hero = () => {
   return (
     <div id='hero' className='Hero' style={{backgroundImage: 'url(https://www.toptal.com/designers/subtlepatterns/patterns/christmas-black.png)'}}>
       <div className='content'>
@@ -66,3 +58,5 @@ const HeroButton = (props) => {
     <a href={props.path || '#'} className='button' data-primary={props.primary}>{props.text}</a>
   );
 };
+
+export default Landing;
