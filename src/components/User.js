@@ -6,13 +6,13 @@ import { openUserEdit } from '../store/actions';
 const User = (props) => {
   const { user, store } = props;
   return (
-    <div className="grid-item" onClick={() => {
+    <div className='grid-item' onClick={() => {
       props.dispatch(openUserEdit(user.id))
     }}>
-      <div className="grid-item-header">
+      <div className='grid-item-header'>
         <div>{user.name}</div>
       </div>
-      <div className="grid-item-content">
+      <div className='grid-item-content'>
         <div>{user.email}</div>
         <div>{user.address.city}</div>
         <div>{user.phone}</div>

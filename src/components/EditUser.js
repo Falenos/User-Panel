@@ -20,15 +20,34 @@ class EditUser extends React.Component {
   }
   render() {
     return (
-      <div className="userEdit-container">
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" ref="name" defaultValue={this.props.user.name} />
-          <input type="text" ref="email" defaultValue={this.props.user.email} />
-          <input type="text" ref="city" defaultValue={this.props.user.address.city} />
-          <input type="text" ref="phone" defaultValue={this.props.user.phone} />
-          <input type="text" ref="website" defaultValue={this.props.user.website} />
-          <input type="text" ref="companyName" defaultValue={this.props.user.company.name} />
-          <button>Save changes</button>
+      <div className='form-container-user'>
+        <form className='form-user' onSubmit={this.handleSubmit}>
+          <h2>User Details</h2>
+          <label className='form-item'>
+            Name:
+            <input type='text' ref='name' defaultValue={this.props.user.name} />
+          </label>
+          <label className='form-item'>
+            Email:
+            <input type='text' ref='email' defaultValue={this.props.user.email} />
+          </label>
+          <label className='form-item'>
+            City:
+            <input type='text' ref='city' defaultValue={this.props.user.address.city} />
+          </label>
+          <label className='form-item'>
+            Phone:
+            <input type='text' ref='phone' defaultValue={this.props.user.phone} />
+          </label>
+          <label className='form-item'>
+            Website:
+            <input type='text' ref='website' defaultValue={this.props.user.website} />
+          </label>
+          <label className='form-item'>
+            Company:
+            <input type='text' ref='companyName' defaultValue={this.props.user.company.name} />
+          </label>
+          <button type='submit' className='button' data-primary={true} >Save changes</button>
         </form>
       </div>
     );

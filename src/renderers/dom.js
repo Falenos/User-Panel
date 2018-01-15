@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 const css = require('styles/index.scss');
 
-if (window.location.pathname === "/") {
+if (window.location.pathname === '/') {
   ReactDOM.render(
     <Landing />,
     document.getElementById('landing')

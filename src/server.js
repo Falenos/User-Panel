@@ -10,12 +10,12 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
-  const landingContent = await serverRender("landing");
+  const landingContent = await serverRender('landing');
   res.render('landing', { ...landingContent });
 });
 
 app.get('/users', async (req, res) => {
-  const initialContent = await serverRender("users");
+  const initialContent = await serverRender('users');
   res.render('index', { ...initialContent });
 });
 

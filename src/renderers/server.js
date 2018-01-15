@@ -19,7 +19,7 @@ import Landing from 'components/Landing';
 
 const serverRender = async (path) => {
 
-  if (path === "landing") {
+  if (path === 'landing') {
     return {
       landingMarkup: ReactDOMServer.renderToString(
         <Landing />

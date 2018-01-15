@@ -9,7 +9,7 @@ const App = (props) => {
     <div>
       <UserList />
       {props.activeUser && <EditUser />}
-      {props.activeUser && <div className="overlay"></div>}
+      {props.activeUser && <div className='overlay'></div>}
     </div>
   );
 }

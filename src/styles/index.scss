@@ -4,7 +4,8 @@
 // Variables
 $font: 'Lato', sans-serif;
 $grid-radius: 6px;
-
+// Breakpoints
+$screen-sm: 768px;
 // Colors
 $red: #e50914;
 $black: #221f1f;
@@ -24,9 +25,10 @@ $petrol: #89d3b2;
 }
 
 // imports
-@import "./components/Landing.scss";
-@import "./components/UserList.scss";
-@import "./components/User.scss";
+@import './components/Landing.scss';
+@import './components/UserList.scss';
+@import './components/EditUser.scss';
+@import './components/User.scss';
 // General
 body {
   margin: 0;
@@ -63,7 +65,6 @@ a {
   color: inherit;
 }
 
-
 .overlay {
   @include generate-gradient($black, 1);
   height: 100%;
@@ -73,4 +74,34 @@ a {
   left: 0;
   width: 100%;
   transform: rotate(180deg);
+}
+
+// Button
+.button {
+  background: transparent;
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $white;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba($grey, .2);
+  border-radius: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: border .125s ease, background .125s ease;
+
+  &:hover {
+    border: 2px solid $grey;
+  }
+
+  &[data-primary='true'] {
+    border: 2px solid $red;
+
+    &:hover {
+      background: $red;
+    }
+  }
 }

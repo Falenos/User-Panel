@@ -22,7 +22,7 @@
       margin: 2px auto;
       // this ensures the width of the grid item will depend on the user name
       max-width: 140px;
-      word-wrap: wrap;
+      word-wrap: break-word;
     }
   }
 }
