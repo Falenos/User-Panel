@@ -1,5 +1,7 @@
 User Panel App.
 
+CURRENTLY WORKS IN UNIX SYSTEMS (no Windows support yet)
+
 Features:
 - Express as a web server
 - Babel for server and client side code
